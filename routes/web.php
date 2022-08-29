@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmailController;
 use App\Http\Livewire\AboutUsComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CartComponent;
@@ -60,6 +61,7 @@ Route::get('/terms-conditions', TermsConditionsComponent::class);
 
 Route::get('/thankyou', ThankyouComponent::class);
 
+Route::post('/contactar', [EmailController::class, 'contact']);
 /*
 // Dashboard igual para todos los tipos de usuario
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

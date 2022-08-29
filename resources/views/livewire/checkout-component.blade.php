@@ -11,7 +11,7 @@
         <div class=" main-content-area">
             <div class="wrap-address-billing">
                 <h3 class="box-title">Dirección de Envio</h3>
-                <form action="#" method="get" name="frm-billing">
+                <form action='/contact' method="POST" name="frm-billing">
                     <p class="row-in-form">
                         <label for="fname">Nombre<span>*</span></label>
                         <input id="fname" type="text" name="fname" value="" placeholder="Nombre">
@@ -83,7 +83,7 @@
                     </div>
                     <p class="summary-info grand-total"><span>Total</span> <span
                             class="grand-total-price">{{ Cart::total() }}</span></p>
-                    <a href="/thankyou" class="btn btn-medium" >Realice su orden ahora</a>
+                    <a href="#" wire:click.prevent="shoppingCart()" class="btn btn-medium" >Realice su orden ahora</a>
                 </div>
                 <div class="summary-item shipping-method">
                     <h4 class="title-box f-title">Método de envío</h4>
