@@ -51,19 +51,5 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-if (!function_exists('config_path')) {
-    /**
-     * Get the configuration path.
-     *
-     * @param string $path
-     * @return string
-     */
-    function config_path($path = '')
-    {
-        return app()->configPath($path);
-    }
-}
-
-$app->register(Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class);
 
 return $app;

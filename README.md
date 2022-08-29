@@ -15,7 +15,7 @@ https://github.com/ladyvargas/EcommerceLaravel8.git
 
 ```bash
 # Crear proyecto
-composer create-project laravel/laravel laravel8ecommerce
+composer create-project laravel/laravel EcommerceLaravel8
 
 # Agregar Livewire a las dependencias
 composer require livewire/livewire
