@@ -18,22 +18,21 @@
                                 <form name="frm-login" method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <fieldset class="wrap-title">
-                                        <h3 class="form-title">Log in to your account</h3>
+                                        <h3 class="form-title">Acceda a su cuenta</h3>
                                     </fieldset>
                                     <fieldset class="wrap-input">
-                                        <label for="frm-login-uname">Email Address:</label>
-                                        <input type="email" id="frm-login-uname" name="email" placeholder="Type your email address" :value="old('email')" required autofocus>
+                                        <label for="frm-login-uname">Correo:</label>
+                                        <input type="email" id="frm-login-uname" name="email" placeholder="Escriba su dirección de correo electrónico" :value="old('email')" required autofocus>
                                     </fieldset>
                                     <fieldset class="wrap-input">
-                                        <label for="frm-login-pass">Password:</label>
+                                        <label for="frm-login-pass">Contraseña:</label>
                                         <input type="password" id="frm-login-pass" name="password" placeholder="************" required autocomplete="current-password">
                                     </fieldset>
 
                                     <fieldset class="wrap-input">
-                                        <label class="remember-field">
-                                            <input class="frm-input " name="remember" id="rememberme" value="forever" type="checkbox"><span>Remember me</span>
+c                                            <input class="frm-input " name="remember" id="rememberme" value="forever" type="checkbox"><span>Recordarmelo</span>
                                         </label>
-                                        <a class="link-function left-position" href="{{ route('password.request') }}" title="Forgotten password?">Forgotten password?</a>
+                                        <a class="link-function left-position" href="{{ route('password.request') }}" title="Forgotten password?">¿Ha olvidado su contraseña?</a>
                                     </fieldset>
                                     <input type="submit" class="btn btn-submit" value="Login" name="submit">
                                 </form>

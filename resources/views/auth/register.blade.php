@@ -18,26 +18,26 @@
                                 <form class="form-stl" action="{{ route('register') }}" name="frm-login" method="POST" >
                                     @csrf
                                     <fieldset class="wrap-title">
-                                        <h3 class="form-title">Create an account</h3>
-                                        <h4 class="form-subtitle">Personal infomation</h4>
+                                        <h3 class="form-title">Crear una cuenta</h3>
+                                        <h4 class="form-subtitle">Información personal</h4>
                                     </fieldset>
                                     <fieldset class="wrap-input">
-                                        <label for="frm-reg-lname">Name*</label>
+                                        <label for="frm-reg-lname">Nombre*</label>
                                         <input type="text" id="frm-reg-lname" name="name" placeholder="Your name*" :value="name" required autofocus autocomplete="name">
                                     </fieldset>
                                     <fieldset class="wrap-input">
-                                        <label for="frm-reg-email">Email Address*</label>
+                                        <label for="frm-reg-email">Correo*</label>
                                         <input type="email" id="frm-reg-email" name="email" placeholder="Email address" :value="email" required>
                                     </fieldset>
                                     <fieldset class="wrap-title">
-                                        <h3 class="form-title">Login Information</h3>
+                                        <h3 class="form-title">Información de acceso</h3>
                                     </fieldset>
                                     <fieldset class="wrap-input item-width-in-half left-item ">
-                                        <label for="frm-reg-pass">Password *</label>
+                                        <label for="frm-reg-pass">Contraseña *</label>
                                         <input type="password" id="frm-reg-pass" name="password" placeholder="Password" required autocomplete="new-password">
                                     </fieldset>
                                     <fieldset class="wrap-input item-width-in-half ">
-                                        <label for="frm-reg-cfpass">Confirm Password *</label>
+                                        <label for="frm-reg-cfpass">Confirme Contraseña *</label>
                                         <input type="password" id="frm-reg-cfpass" name="password_confirmation" placeholder="Confirm Password" required autocomplete="new-password">
                                     </fieldset>
                                     <input type="submit" class="btn btn-sign" value="Register" name="register">
