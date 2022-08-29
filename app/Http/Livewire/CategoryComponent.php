@@ -2,11 +2,11 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Category;
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Cart;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Cart;
-use App\Models\Category;
 
 class CategoryComponent extends Component
 {
@@ -20,7 +20,7 @@ class CategoryComponent extends Component
         $this->pagesize = 12;
         $this->category_slug = $category_slug;
     }
-    
+
     use WithPagination;
     public function render()
     {
@@ -40,11 +40,11 @@ class CategoryComponent extends Component
         else{
             $products = Product::where('category_id', $category_id)->paginate($this->pagesize);
         }
-        
+
         $popular_products = Product::inRandomOrder()->limit(4)->get();
 
         $categories = Category::all();
-        
+
         return view('livewire.category-component', [
             'products' => $products,
             'popular_products' => $popular_products,

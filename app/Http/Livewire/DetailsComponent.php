@@ -3,8 +3,8 @@
 namespace App\Http\Livewire;
 
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Cart;
 use Livewire\Component;
-use Cart;
 
 class DetailsComponent extends Component
 {
@@ -22,7 +22,7 @@ class DetailsComponent extends Component
         $related_products = Product::where('category_id', $product->category_id)->inRandomOrder()->limit(5)->get();
 
         return view('livewire.details-component', [
-            'product' => $product, 
+            'product' => $product,
             'popular_products' => $popular_products,
             'related_products' => $related_products
         ])->layout('layouts.base');

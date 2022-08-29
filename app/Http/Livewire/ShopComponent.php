@@ -3,9 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Cart;
 use App\Models\Category;
 
 class ShopComponent extends Component
@@ -18,8 +18,8 @@ class ShopComponent extends Component
         $this->sorting = "default";
         $this->pagesize = 12;
     }
-    
-    use WithPagination;    
+
+    use WithPagination;
     public function render()
     {
         if($this->sorting == 'date'){
@@ -34,7 +34,7 @@ class ShopComponent extends Component
         else{
             $products = Product::paginate($this->pagesize);
         }
-        
+
         $popular_products = Product::inRandomOrder()->limit(4)->get();
 
         $categories = Category::all();

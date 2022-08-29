@@ -3,9 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\Models\Product;
+use Gloudemans\Shoppingcart\Cart;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Cart;
 use App\Models\Category;
 
 class SearchComponent extends Component
